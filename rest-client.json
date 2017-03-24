@@ -1,0 +1,115 @@
+{
+	"variables": [],
+	"info": {
+		"name": "spring-boot-rest-client",
+		"_postman_id": "4ea2cd49-7f6e-50a6-f22c-d3943fc4a88a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "processes",
+			"description": "",
+			"item": [
+				{
+					"name": "get all processes",
+					"request": {
+						"url": "{{server}}:{{port}}/api/processes",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get process",
+					"request": {
+						"url": "{{server}}:{{port}}/api/processes/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "create process",
+					"request": {
+						"url": "{{server}}:{{port}}/api/processes",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"description\": \"Testing the new REST API\",\n  \"completed\": false\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update process",
+					"request": {
+						"url": "{{server}}:{{port}}/api/processes/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1,\n  \"description\": \"Instantiation\",\n  \"completed\": false,\n  \"tasks\": [\n  \t{\n      \"description\": \"task 01-a\",\n      \"completed\": false\n    },\n    {\n      \"description\": \"task 02-a\",\n      \"completed\": false\n    },\n    {\n      \"description\": \"task 03-a\",\n      \"completed\": false\n    }\n  ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete process",
+					"request": {
+						"url": "{{server}}:{{port}}/api/processes/0",
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
