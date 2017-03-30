@@ -22,12 +22,16 @@ public abstract class ProcessMapper implements Mapper<Process, ProcessDTO> {
 
     @BeforeMapping
     protected void wipeTasks(@MappingTarget Process process) {
-        taskRepository.delete(process.getTasks());
+        if (process.getTasks() != null) {
+            taskRepository.delete(process.getTasks());
+        }
     }
 
     @AfterMapping
     protected void saveTasks(@MappingTarget Process process) {
-        process.getTasks().forEach(t -> t.setParentID(process.getId()));
-        taskRepository.save(process.getTasks());
+        if (process.getTasks() != null) {
+            process.getTasks().forEach(t -> t.setParentID(process.getId()));
+            taskRepository.save(process.getTasks());
+        }
     }
 }
