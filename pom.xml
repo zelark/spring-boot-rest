@@ -7,10 +7,12 @@
     <groupId>ru.zelark</groupId>
     <artifactId>spring-boot-rest</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
     <modules>
         <module>spring-boot-rest-server</module>
+        <module>spring-boot-rest-client</module>
     </modules>
-    <packaging>pom</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

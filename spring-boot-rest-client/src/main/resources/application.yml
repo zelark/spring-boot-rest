@@ -1,0 +1,5 @@
+server:
+  port: 8081
+
+resource:
+  processes: http://localhost:8080/api/processes

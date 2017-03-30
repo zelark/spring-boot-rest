@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:400,300,600"/>
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
+    <title>REST client</title>
+</head>
+<body>
+<div class="container">
+    <h1>Processes</h1>
+    <!-- List of processes. -->
+    <div class="row" th:each="process : ${processes}">
+        <div class="nine columns">
+            <form th:method="put" th:action="@{/}">
+                <input type="hidden" name="id" th:value="${process.id}"/>
+                <input type="hidden" name="description" th:value="${process.description}"/>
+                <input type="checkbox" name="completed" th:checked="${process.completed}"
+                       onchange="form.submit()"/>
+                <span th:text="${process.description}"></span>
+            </form>
+        </div>
+        <div class="three columns">
+            <form th:method="delete" th:action="@{/}">
+                <input type="hidden" name="id" th:value="${process.id}"/>
+                <button class="button u-full-width" type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+    <hr/>
+    <!-- The form to create a new process. -->
+    <form method="post" th:action="@{/}" th:object="${newProcess}">
+        <div class="row">
+            <div class="nine columns">
+                <input type="text" placeholder="Description of the process" class="u-full-width"
+                       th:field="*{description}"/>
+                <span th:if="${error != null}" th:text="${error}"></span>
+            </div>
+            <div class="three columns">
+                <button type="submit" class="button-primary u-full-width">Create</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
