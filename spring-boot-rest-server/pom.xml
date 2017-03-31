@@ -6,7 +6,7 @@
 
     <parent>
         <artifactId>spring-boot-rest</artifactId>
-        <groupId>ru.zelark</groupId>
+        <groupId>sun.rock</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
