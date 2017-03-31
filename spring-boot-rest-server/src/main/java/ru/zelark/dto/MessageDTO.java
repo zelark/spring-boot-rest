@@ -2,20 +2,20 @@ package ru.zelark.dto;
 
 public class MessageDTO {
 
-    private String message;
+  private String message;
 
-    public MessageDTO(String message) {
-        this.message = message;
-    }
+  public MessageDTO(String message) {
+    this.message = message;
+  }
 
-    public MessageDTO() {
-    }
+  public MessageDTO() {
+  }
 
-    public String getMessage() {
-        return message;
-    }
+  public String getMessage() {
+    return message;
+  }
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
+  public void setMessage(String message) {
+    this.message = message;
+  }
 }

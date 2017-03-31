@@ -11,55 +11,55 @@ import static com.fasterxml.jackson.annotation.JsonInclude.Include;
 @JsonInclude(Include.NON_EMPTY)
 public class ProcessDTO {
 
-    @JsonInclude
-    private Long id;
+  @JsonInclude
+  private Long id;
 
-    @NotNull(message = "NotNull.processDTO.description")
-    @Size(min = 1, max = 64, message = "Size.processDTO.description")
-    private String description;
+  @NotNull(message = "NotNull.processDTO.description")
+  @Size(min = 1, max = 64, message = "Size.processDTO.description")
+  private String description;
 
-    private boolean completed;
+  private boolean completed;
 
-    private List<TaskDTO> tasks;
+  private List<TaskDTO> tasks;
 
-    public ProcessDTO(Long id, String description, boolean completed) {
-        this.id = id;
-        this.description = description;
-        this.completed = completed;
-    }
+  public ProcessDTO(Long id, String description, boolean completed) {
+    this.id = id;
+    this.description = description;
+    this.completed = completed;
+  }
 
-    public ProcessDTO() {
-    }
+  public ProcessDTO() {
+  }
 
-    public Long getId() {
-        return id;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public String getDescription() {
-        return description;
-    }
+  public String getDescription() {
+    return description;
+  }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+  public void setDescription(String description) {
+    this.description = description;
+  }
 
-    public boolean isCompleted() {
-        return completed;
-    }
+  public boolean isCompleted() {
+    return completed;
+  }
 
-    public void setCompleted(boolean completed) {
-        this.completed = completed;
-    }
+  public void setCompleted(boolean completed) {
+    this.completed = completed;
+  }
 
-    public List<TaskDTO> getTasks() {
-        return tasks;
-    }
+  public List<TaskDTO> getTasks() {
+    return tasks;
+  }
 
-    public void setTasks(List<TaskDTO> tasks) {
-        this.tasks = tasks;
-    }
+  public void setTasks(List<TaskDTO> tasks) {
+    this.tasks = tasks;
+  }
 }

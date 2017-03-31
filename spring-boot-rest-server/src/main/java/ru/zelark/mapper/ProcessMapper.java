@@ -13,25 +13,27 @@ import java.util.List;
 @org.mapstruct.Mapper(uses = TaskMapper.class)
 public abstract class ProcessMapper implements Mapper<Process, ProcessDTO> {
 
-    @Autowired private TaskRepository taskRepository;
+  @Autowired
+  private TaskRepository taskRepository;
 
-    public abstract ProcessDTO toDTO(Process process);
-    public abstract List<ProcessDTO> toDTOs(List<Process> processes);
+  public abstract ProcessDTO toDTO(Process process);
 
-    public abstract void update(@MappingTarget Process process, ProcessDTO dto);
+  public abstract List<ProcessDTO> toDTOs(List<Process> processes);
 
-    @BeforeMapping
-    protected void wipeTasks(@MappingTarget Process process) {
-        if (process.getTasks() != null) {
-            taskRepository.delete(process.getTasks());
-        }
+  public abstract void update(@MappingTarget Process process, ProcessDTO dto);
+
+  @BeforeMapping
+  protected void wipeTasks(@MappingTarget Process process) {
+    if (process.getTasks() != null) {
+      taskRepository.delete(process.getTasks());
     }
+  }
 
-    @AfterMapping
-    protected void saveTasks(@MappingTarget Process process) {
-        if (process.getTasks() != null) {
-            process.getTasks().forEach(t -> t.setParentID(process.getId()));
-            taskRepository.save(process.getTasks());
-        }
+  @AfterMapping
+  protected void saveTasks(@MappingTarget Process process) {
+    if (process.getTasks() != null) {
+      process.getTasks().forEach(t -> t.setParentID(process.getId()));
+      taskRepository.save(process.getTasks());
     }
+  }
 }
