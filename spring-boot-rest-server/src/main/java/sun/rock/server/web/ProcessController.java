@@ -1,4 +1,4 @@
-package ru.zelark.web;
+package sun.rock.server.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import ru.zelark.dto.MessageDTO;
-import ru.zelark.dto.ProcessDTO;
-import ru.zelark.service.ProcessNotFoundException;
-import ru.zelark.service.ProcessService;
+import sun.rock.server.dto.MessageDTO;
+import sun.rock.server.dto.ProcessDTO;
+import sun.rock.server.service.ProcessNotFoundException;
+import sun.rock.server.service.ProcessService;
 
 import javax.validation.Valid;
 import java.util.List;

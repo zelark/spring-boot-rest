@@ -1,4 +1,4 @@
-package ru.zelark.mapper;
+package sun.rock.server.mapper;
 
 import java.util.List;
 

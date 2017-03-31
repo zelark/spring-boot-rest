@@ -1,7 +1,7 @@
-package ru.zelark.repository;
+package sun.rock.server.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import ru.zelark.entity.Task;
+import sun.rock.server.entity.Task;
 
 public interface TaskRepository extends JpaRepository<Task, Long> {
 }

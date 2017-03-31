@@ -1,11 +1,11 @@
-package ru.zelark.service;
+package sun.rock.server.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.zelark.dto.ProcessDTO;
-import ru.zelark.entity.Process;
-import ru.zelark.mapper.Mapper;
-import ru.zelark.repository.ProcessRepository;
+import sun.rock.server.dto.ProcessDTO;
+import sun.rock.server.entity.Process;
+import sun.rock.server.mapper.Mapper;
+import sun.rock.server.repository.ProcessRepository;
 
 import javax.transaction.Transactional;
 import java.util.List;

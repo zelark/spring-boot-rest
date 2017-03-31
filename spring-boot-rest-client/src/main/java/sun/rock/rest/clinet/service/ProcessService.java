@@ -6,7 +6,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import ru.zelark.dto.ProcessDTO;
+import sun.rock.server.dto.ProcessDTO;
 
 import java.util.Arrays;
 import java.util.List;

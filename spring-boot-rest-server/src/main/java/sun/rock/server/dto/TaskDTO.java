@@ -1,34 +1,30 @@
-package ru.zelark.dto;
+package sun.rock.server.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import static com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 @JsonInclude(Include.NON_EMPTY)
-public class ProcessDTO {
+public class TaskDTO {
 
   @JsonInclude
   private Long id;
 
-  @NotNull(message = "NotNull.processDTO.description")
-  @Size(min = 1, max = 64, message = "Size.processDTO.description")
+  @JsonProperty("process-id")
+  private Long processID;
+
   private String description;
 
   private boolean completed;
 
-  private List<TaskDTO> tasks;
-
-  public ProcessDTO(Long id, String description, boolean completed) {
+  public TaskDTO(Long id, String description, boolean completed) {
     this.id = id;
     this.description = description;
     this.completed = completed;
   }
 
-  public ProcessDTO() {
+  public TaskDTO() {
   }
 
   public Long getId() {
@@ -37,6 +33,14 @@ public class ProcessDTO {
 
   public void setId(Long id) {
     this.id = id;
+  }
+
+  public Long getProcessID() {
+    return processID;
+  }
+
+  public void setProcessID(Long processID) {
+    this.processID = processID;
   }
 
   public String getDescription() {
@@ -53,13 +57,5 @@ public class ProcessDTO {
 
   public void setCompleted(boolean completed) {
     this.completed = completed;
-  }
-
-  public List<TaskDTO> getTasks() {
-    return tasks;
-  }
-
-  public void setTasks(List<TaskDTO> tasks) {
-    this.tasks = tasks;
   }
 }

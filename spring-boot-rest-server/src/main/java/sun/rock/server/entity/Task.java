@@ -1,4 +1,4 @@
-package ru.zelark.entity;
+package sun.rock.server.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

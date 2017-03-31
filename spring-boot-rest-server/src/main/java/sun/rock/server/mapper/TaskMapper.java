@@ -1,8 +1,8 @@
-package ru.zelark.mapper;
+package sun.rock.server.mapper;
 
 import org.mapstruct.MappingTarget;
-import ru.zelark.dto.TaskDTO;
-import ru.zelark.entity.Task;
+import sun.rock.server.dto.TaskDTO;
+import sun.rock.server.entity.Task;
 
 import java.util.List;
 

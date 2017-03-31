@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.HttpClientErrorException;
-import ru.zelark.dto.MessageDTO;
-import ru.zelark.dto.ProcessDTO;
+import sun.rock.server.dto.MessageDTO;
+import sun.rock.server.dto.ProcessDTO;
 import sun.rock.rest.clinet.service.ProcessService;
 
 import java.io.IOException;

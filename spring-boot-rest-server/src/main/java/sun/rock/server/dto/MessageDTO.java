@@ -1,4 +1,4 @@
-package ru.zelark.dto;
+package sun.rock.server.dto;
 
 public class MessageDTO {
 

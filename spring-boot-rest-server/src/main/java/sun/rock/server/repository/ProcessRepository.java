@@ -1,7 +1,7 @@
-package ru.zelark.repository;
+package sun.rock.server.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import ru.zelark.entity.Process;
+import sun.rock.server.entity.Process;
 
 public interface ProcessRepository extends JpaRepository<Process, Long> {
 }

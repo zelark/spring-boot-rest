@@ -1,12 +1,12 @@
-package ru.zelark.mapper;
+package sun.rock.server.mapper;
 
 import org.mapstruct.AfterMapping;
 import org.mapstruct.BeforeMapping;
 import org.mapstruct.MappingTarget;
 import org.springframework.beans.factory.annotation.Autowired;
-import ru.zelark.dto.ProcessDTO;
-import ru.zelark.entity.Process;
-import ru.zelark.repository.TaskRepository;
+import sun.rock.server.dto.ProcessDTO;
+import sun.rock.server.entity.Process;
+import sun.rock.server.repository.TaskRepository;
 
 import java.util.List;
 
